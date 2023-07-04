@@ -11,7 +11,7 @@
   "categories": [
     "Snippets"
   ],
-  "icon": "media/docbook-logo.png",
+  "icon": "./media/docbook-logo.png",
   "contributes": {
     "snippets": [
       {

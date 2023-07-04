@@ -8,7 +8,7 @@ DocBook markup letters. For example, pressing `li` results in `<listitem>insert
 content</listitem>`. The list of snippets is not complete and is being extended
 as required.
 
-![Adding an itemized list.](https://raw.githubusercontent.com/openSUSE/suse-vscode-doc/main/extensions/docbook-snippets/media/itemizedlist.gif)
+![Adding an itemized list.](./media/itemizedlist.gif)
 
 
 ## Requirements
