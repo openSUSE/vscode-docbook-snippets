@@ -418,5 +418,40 @@
             "\t</abstract>",
             "</merge>"
         ]
+    },
+    "Substeps": {
+        "prefix": "ss",
+        "body": [
+            "<substeps>",
+            "\t<step>",
+            "\t\t<para>",
+            "\t\t\t${1:insert text}",
+            "\t\t</para>",
+            "\t</step>",
+            "\t<step>",
+            "\t\t<para>",
+            "\t\t\t${2:insert text}",
+            "\t\t</para>",
+            "\t</step>",
+            "</substeps>"
+        ],
+    },
+    "Keycap": {
+        "prefix": "kc",
+        "body": "<keycap>${1:insert keycap}</keycap>"
+    },
+    "Keycap with a function": {
+        "prefix": "kcf",
+        "body": "<keycap function=\"${1|enter,alt,shift,ctrl|}\"/>"
+    },
+    "Callout": {
+        "prefix": "co",
+        "body": "<co xml:id=\"${1:insert ID}\"/>"
+    },
+    "Callout list": {
+        "prefix": "col",
+        "body": [
+            ""
+        ]
     }
 }
