@@ -444,14 +444,35 @@
         "prefix": "kcf",
         "body": "<keycap function=\"${1|enter,alt,shift,ctrl|}\"/>"
     },
-    "Callout": {
+    "Callout location": {
         "prefix": "co",
         "body": "<co xml:id=\"${1:insert ID}\"/>"
     },
+    "Callout definition": {
+        "prefix": "coa",
+        "body": [
+            "<callout arearefs=\"${1:insert ID}\">",
+            "\t<para>",
+            "\t\t${2:insert text}",
+            "\t</para>",
+            "</callout>",
+        ]
+    }
     "Callout list": {
         "prefix": "col",
         "body": [
-            ""
+            "<calloutlist>",
+            "\t<callout arearefs=\"${1:insert ID}\">",
+            "\t\t<para>",
+            "\t\t\t${2:insert text}",
+            "\t\t</para>",
+            "\t</callout>",
+            "\t<callout arearefs=\"${3:insert ID}\">",
+            "\t\t<para>",
+            "\t\t\t${4:insert text}",
+            "\t\t</para>",
+            "\t</callout>",
+            "</calloutlist>"
         ]
     }
 }
