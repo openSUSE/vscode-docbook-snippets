@@ -442,7 +442,7 @@
     },
     "Keycap with a function": {
         "prefix": "kcf",
-        "body": "<keycap function=\"${1|enter,alt,shift,ctrl|}\"/>"
+        "body": "<keycap function=\"${1|alt,altgr,backspace,command,control,delete,down,end,enter,escape,home,insert,left,meta,option,pagedown,pageup,right,return,shift,space,tab,up|}\"/>"
     },
     "Callout location": {
         "prefix": "co",
