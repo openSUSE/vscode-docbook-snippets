@@ -418,5 +418,61 @@
             "\t</abstract>",
             "</merge>"
         ]
+    },
+    "Substeps": {
+        "prefix": "ss",
+        "body": [
+            "<substeps>",
+            "\t<step>",
+            "\t\t<para>",
+            "\t\t\t${1:insert text}",
+            "\t\t</para>",
+            "\t</step>",
+            "\t<step>",
+            "\t\t<para>",
+            "\t\t\t${2:insert text}",
+            "\t\t</para>",
+            "\t</step>",
+            "</substeps>"
+        ],
+    },
+    "Keycap": {
+        "prefix": "kc",
+        "body": "<keycap>${1:insert keycap}</keycap>"
+    },
+    "Keycap with a function": {
+        "prefix": "kcf",
+        "body": "<keycap function=\"${1|alt,altgr,backspace,command,control,delete,down,end,enter,escape,home,insert,left,meta,option,pagedown,pageup,right,return,shift,space,tab,up|}\"/>"
+    },
+    "Callout location": {
+        "prefix": "co",
+        "body": "<co xml:id=\"${1:insert ID}\"/>"
+    },
+    "Callout definition": {
+        "prefix": "coa",
+        "body": [
+            "<callout arearefs=\"${1:insert one or more IDs}\">",
+            "\t<para>",
+            "\t\t${2:insert text}",
+            "\t</para>",
+            "</callout>",
+        ]
+    },
+    "Callout list": {
+        "prefix": "col",
+        "body": [
+            "<calloutlist>",
+            "\t<callout arearefs=\"${1:insert one or more IDs}\">",
+            "\t\t<para>",
+            "\t\t\t${2:insert text}",
+            "\t\t</para>",
+            "\t</callout>",
+            "\t<callout arearefs=\"${3:insert one or more IDs}\">",
+            "\t\t<para>",
+            "\t\t\t${4:insert text}",
+            "\t\t</para>",
+            "\t</callout>",
+            "</calloutlist>"
+        ]
     }
 }
