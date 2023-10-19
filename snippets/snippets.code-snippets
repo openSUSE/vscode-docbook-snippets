@@ -86,6 +86,7 @@
             "\t\t\t<term>${3:insert term}</term>",
             "\t\t\t<listitem>",
             "\t\t\t\t<para>",
+            "body": [
             "\t\t\t\t\t${4:insert text}",
             "\t\t\t\t</para>",
             "\t\t\t</listitem>",
@@ -196,9 +197,9 @@
     "Step": {
         "prefix": "st",
         "body": [
-            "<step>",
+            "<step${1|>, performance=\"optional\">|}",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${2:insert text}",
             "\t</para>",
             "</step>"
         ]
@@ -233,16 +234,10 @@
             "${3:insert output}</screen>"
         ]
     },
-    "System item": {
+    "System item of a type": {
         "prefix": "si",
         "body": [
-            "<systemitem>${1:insert item}</systemitem>"
-        ]
-    },
-    "System item of a type": {
-        "prefix": "sit",
-        "body": [
-            "<systemitem class=\"${1|daemon,resource,username|}\">${2:insert item}</systemitem>"
+            "<systemitem${1|>, class=\"daemon\">, class=\"resource\">, class=\"username\">|}${2:insert item}</systemitem>"
         ]
     },
     "Tip": {
@@ -422,15 +417,15 @@
     "Substeps": {
         "prefix": "ss",
         "body": [
-            "<substeps>",
+            "<substeps${1|>, performance=\"optional\">|}",
             "\t<step>",
             "\t\t<para>",
-            "\t\t\t${1:insert text}",
+            "\t\t\t${2:insert text}",
             "\t\t</para>",
             "\t</step>",
             "\t<step>",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${3:insert text}",
             "\t\t</para>",
             "\t</step>",
             "</substeps>"
