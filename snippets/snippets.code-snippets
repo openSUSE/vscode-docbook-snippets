@@ -484,5 +484,26 @@
             "\t<description>${3:insert description}</description>",
             "</resource>"
         ]
+    },
+    "Assembly module": {
+        "prefix": "md",
+        "body": [
+            "<module renderas=\"${1|chapter,section,appendix|}\" resourceref=\"${2:insert ID}\"/>"
+        ]
+    },
+    "Assembly module with merge": {
+        "prefix": "mdm",
+        "body": [
+            "<module renderas=\"${1|chapter,section,appendix|}\" resourceref=\"${2:insert ID}\">",
+            "\t<merge>",
+            "\t\t<title>${3:insert title}</title>",
+            "\t\t<abstract>",
+            "\t\t\t<para>",
+            "\t\t\t\t${4:insert text}",
+            "\t\t\t</para>",
+            "\t\t</abstract>",
+            "\t</merge>",
+            "</module>"
+        ]
     }
 }
