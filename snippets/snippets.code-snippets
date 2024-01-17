@@ -476,5 +476,13 @@
             "\t</callout>",
             "</calloutlist>"
         ]
+    },
+    "Assembly resource": {
+        "prefix": "rs",
+        "body": [
+            "<resource href=\"${1:insert path to XML file}\" xml:id=\"${2:insert ID}\">",
+            "\t<description>${3:insert description}</description>",
+            "</resource>"
+        ]
     }
 }
