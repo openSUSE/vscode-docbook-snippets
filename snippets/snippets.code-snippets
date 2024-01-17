@@ -197,6 +197,14 @@
         "prefix": "st",
         "body": [
             "<step${1|>, performance=\"optional\">|}",
+            "\t${2:}",
+            "</step>"
+        ]
+    },
+    "Step with a paragraph": {
+        "prefix": "stp",
+        "body": [
+            "<step${1|>, performance=\"optional\">|}",
             "\t<para>",
             "\t\t${2:insert text}",
             "\t</para>",
@@ -233,14 +241,8 @@
             "${3:insert output}</screen>"
         ]
     },
-    "System item": {
+    "System item (of a type)": {
         "prefix": "si",
-        "body": [
-            "<systemitem>${1:insert item}</systemitem>"
-        ]
-    },
-    "System item of a type": {
-        "prefix": "sit",
         "body": [
             "<systemitem${1|>, class=\"daemon\">, class=\"domainname\">, class=\"etheraddress\">, class=\"event\">, class=\"eventhandler\">, class=\"filesystem\">, class=\"fqdomainname\">, class=\"groupname\">, class=\"interface\">, class=\"ipaddress\">, class=\"library\">, class=\"macro\">, class=\"netmask\">, class=\"newsgroup\">, class=\"osname\">, class=\"process\">, class=\"protocol\">, class=\"resource\">, class=\"securitycontext\">, class=\"server\">, class=\"service\">, class=\"systemname\">, class=\"username\">|}${2:insert item}</systemitem>"
         ]
