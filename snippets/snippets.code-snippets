@@ -86,7 +86,6 @@
             "\t\t\t<term>${3:insert term}</term>",
             "\t\t\t<listitem>",
             "\t\t\t\t<para>",
-            "body": [
             "\t\t\t\t\t${4:insert text}",
             "\t\t\t\t</para>",
             "\t\t\t</listitem>",
@@ -234,10 +233,16 @@
             "${3:insert output}</screen>"
         ]
     },
-    "System item of a type": {
+    "System item": {
         "prefix": "si",
         "body": [
-            "<systemitem${1|>, class=\"daemon\">, class=\"resource\">, class=\"username\">|}${2:insert item}</systemitem>"
+            "<systemitem>${1:insert item}</systemitem>"
+        ]
+    },
+    "System item of a type": {
+        "prefix": "sit",
+        "body": [
+            "<systemitem class=\"${1|daemon,resource,username|}\">${2:insert item}</systemitem>"
         ]
     },
     "Tip": {
