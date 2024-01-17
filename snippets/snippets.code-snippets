@@ -242,7 +242,7 @@
     "System item of a type": {
         "prefix": "sit",
         "body": [
-            "<systemitem class=\"${1|daemon,resource,username|}\">${2:insert item}</systemitem>"
+            "<systemitem${1|>, class=\"daemon\">, class=\"domainname\">, class=\"etheraddress\">, class=\"event\">, class=\"eventhandler\">, class=\"filesystem\">, class=\"fqdomainname\">, class=\"groupname\">, class=\"interface\">, class=\"ipaddress\">, class=\"library\">, class=\"macro\">, class=\"netmask\">, class=\"newsgroup\">, class=\"osname\">, class=\"process\">, class=\"protocol\">, class=\"resource\">, class=\"securitycontext\">, class=\"server\">, class=\"service\">, class=\"systemname\">, class=\"username\">|}${2:insert item}</systemitem>"
         ]
     },
     "Tip": {
