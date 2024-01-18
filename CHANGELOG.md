@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.3.2
+- added <performance=optional/> to steps and substeps
+- populated <systemitem/> `si` with all classes and removed `sit`
+- updated <step> `st` and added `stp` with <para/>
+- added <resource/> `rs`
+- added <module/> `md` with optional `mdd`
+- added <phrase/> `ph` with basic attributes
 ## 0.3.1
 - added <keycap/>'s <callout/> and <substeps/>
 
