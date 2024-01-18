@@ -136,8 +136,9 @@
         "prefix": "im",
         "body": [
             "<important>",
+            "\t<title>${1:insert title}</title>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${2:insert text}",
             "\t</para>",
             "</important>"
         ]
@@ -158,8 +159,9 @@
         "prefix": "nt",
         "body": [
             "<note>",
+            "\t<title>${1:insert title}</title>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${2:insert text}",
             "\t</para>",
             "</note>"
         ]
@@ -196,9 +198,17 @@
     "Step": {
         "prefix": "st",
         "body": [
-            "<step>",
+            "<step${1|>, performance=\"optional\">|}",
+            "\t${2:}",
+            "</step>"
+        ]
+    },
+    "Step with a paragraph": {
+        "prefix": "stp",
+        "body": [
+            "<step${1|>, performance=\"optional\">|}",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${2:insert text}",
             "\t</para>",
             "</step>"
         ]
@@ -233,16 +243,10 @@
             "${3:insert output}</screen>"
         ]
     },
-    "System item": {
+    "System item (of a type)": {
         "prefix": "si",
         "body": [
-            "<systemitem>${1:insert item}</systemitem>"
-        ]
-    },
-    "System item of a type": {
-        "prefix": "sit",
-        "body": [
-            "<systemitem class=\"${1|daemon,resource,username|}\">${2:insert item}</systemitem>"
+            "<systemitem${1|>, class=\"daemon\">, class=\"domainname\">, class=\"etheraddress\">, class=\"event\">, class=\"eventhandler\">, class=\"filesystem\">, class=\"fqdomainname\">, class=\"groupname\">, class=\"interface\">, class=\"ipaddress\">, class=\"library\">, class=\"macro\">, class=\"netmask\">, class=\"newsgroup\">, class=\"osname\">, class=\"process\">, class=\"protocol\">, class=\"resource\">, class=\"securitycontext\">, class=\"server\">, class=\"service\">, class=\"systemname\">, class=\"username\">|}${2:insert item}</systemitem>"
         ]
     },
     "Tip": {
@@ -259,8 +263,9 @@
         "prefix": "wn",
         "body": [
             "<warning>",
+            "\t<title>${1:insert title}</title>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${2:insert text}",
             "\t</para>",
             "</warning>"
         ]
@@ -422,15 +427,15 @@
     "Substeps": {
         "prefix": "ss",
         "body": [
-            "<substeps>",
+            "<substeps${1|>, performance=\"optional\">|}",
             "\t<step>",
             "\t\t<para>",
-            "\t\t\t${1:insert text}",
+            "\t\t\t${2:insert text}",
             "\t\t</para>",
             "\t</step>",
             "\t<step>",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${3:insert text}",
             "\t\t</para>",
             "\t</step>",
             "</substeps>"
@@ -473,6 +478,41 @@
             "\t\t</para>",
             "\t</callout>",
             "</calloutlist>"
+        ]
+    },
+    "Assembly resource": {
+        "prefix": "rs",
+        "body": [
+            "<resource href=\"${1:insert path to XML file}\" xml:id=\"${2:insert ID}\">",
+            "\t<description>${3:insert description}</description>",
+            "</resource>"
+        ]
+    },
+    "Assembly module": {
+        "prefix": "md",
+        "body": [
+            "<module renderas=\"${1|chapter,section,appendix|}\" resourceref=\"${2:insert ID}\"/>"
+        ]
+    },
+    "Assembly module with merge": {
+        "prefix": "mdm",
+        "body": [
+            "<module renderas=\"${1|chapter,section,appendix|}\" resourceref=\"${2:insert ID}\">",
+            "\t<merge>",
+            "\t\t<title>${3:insert title}</title>",
+            "\t\t<abstract>",
+            "\t\t\t<para>",
+            "\t\t\t\t${4:insert text}",
+            "\t\t\t</para>",
+            "\t\t</abstract>",
+            "\t</merge>",
+            "</module>"
+        ]
+    },
+    "Phrase": {
+        "prefix": "ph",
+        "body": [
+            "<phrase${1|>, os=\"sles;sled;osuse;slemocro;alp-dolomite\">, condition=\"\">, arch=\"x86_64;zseries;power\">|}${3:insert phrase}</phrase>"
         ]
     }
 }
