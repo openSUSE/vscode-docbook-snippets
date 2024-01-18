@@ -136,8 +136,9 @@
         "prefix": "im",
         "body": [
             "<important>",
+            "\t<title>${1:insert title}</title>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${2:insert text}",
             "\t</para>",
             "</important>"
         ]
@@ -158,8 +159,9 @@
         "prefix": "nt",
         "body": [
             "<note>",
+            "\t<title>${1:insert title}</title>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${2:insert text}",
             "\t</para>",
             "</note>"
         ]
@@ -261,8 +263,9 @@
         "prefix": "wn",
         "body": [
             "<warning>",
+            "\t<title>${1:insert title}</title>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${2:insert text}",
             "\t</para>",
             "</warning>"
         ]
@@ -504,6 +507,12 @@
             "\t\t</abstract>",
             "\t</merge>",
             "</module>"
+        ]
+    },
+    "Phrase": {
+        "prefix": "ph",
+        "body": [
+            "<phrase${1|>, os=\"sles;sled;osuse;slemocro;alp-dolomite\">, condition=\"\">, arch=\"x86_64;zseries;power\">|}${3:insert phrase}</phrase>"
         ]
     }
 }
