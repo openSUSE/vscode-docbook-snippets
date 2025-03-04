@@ -514,5 +514,21 @@
         "body": [
             "<phrase${1|>, os=\"sles;sled;osuse;slemocro;alp-dolomite\">, condition=\"\">, arch=\"x86_64;zseries;power\">|}${3:insert phrase}</phrase>"
         ]
+    },
+    "Quote": {
+        "prefix": "qt",
+        "body": "<quote>${1:insert text}</quote>"
+    },
+    "Example": {
+        "prefix": "ex",
+        "body": [
+            "<example xml:id=\"${1:insert ID}\">",
+            "\t<title>${2:insert title}</title>",
+            "\t<para>",
+            "\t\t${3:insert text}",
+            "\t</para>",
+            "\t<screen>${4:insert output}</screen>",
+            "</example>"
+        ]
     }
 }
