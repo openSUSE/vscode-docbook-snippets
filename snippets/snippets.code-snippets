@@ -3,7 +3,7 @@
         "prefix": "pa",
         "body": [
             "<para>",
-            "\t${1:insert text}",
+            "\t${1:TEXT}",
             "</para>"
         ]
     },
@@ -11,7 +11,7 @@
         "prefix": "li",
         "body": [
             "<listitem>",
-            "\t${1:insert text}",
+            "\t${1:TEXT}",
             "</listitem>"
         ]
     },
@@ -20,14 +20,14 @@
         "body": [
             "<listitem>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${1:TEXT}",
             "\t</para>",
             "</listitem>"
         ]
     },
     "Title": {
         "prefix": "tt",
-        "body": "<title>${1:insert title}</title>"
+        "body": "<title>${1:TITLE}</title>"
     },
     "Itemized list": {
         "prefix": "il",
@@ -35,12 +35,12 @@
             "<itemizedlist>",
             "\t<listitem>",
             "\t\t<para>",
-            "\t\t\t${1:insert text}",
+            "\t\t\t${1:TEXT}",
             "\t\t</para>",
             "\t</listitem>",
             "\t<listitem>",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${2:TEXT}",
             "\t\t</para>",
             "\t</listitem>",
             "</itemizedlist>"
@@ -49,10 +49,10 @@
     "Section": {
         "prefix": "s",
         "body": [
-            "<sect${1|ion,1,2,3,4|} xml:id=\"${2:insert ID}\">",
-            "\t<title>${3:insert title}</title>",
+            "<sect${1|ion,1,2,3,4|} xml:id=\"${2:XML_ID}\">",
+            "\t<title>${3:TITLE}</title>",
             "\t<para>",
-            "\t\t${4:insert text}",
+            "\t\t${4:TEXT}",
             "\t</para>",
             "</sect${1|ion,1,2,3,4|}>"
         ]
@@ -61,10 +61,10 @@
         "prefix": "ve",
         "body": [
             "<varlistentry>",
-            "\t\t<term>${1:insert term}</term>",
+            "\t\t<term>${1:TERM}</term>",
             "\t\t<listitem>",
             "\t\t\t<para>",
-            "\t\t\t\t${2:insert text}",
+            "\t\t\t\t${2:TEXT}",
             "\t\t\t</para>",
             "\t\t</listitem>",
             "</varlistentry>"
@@ -75,18 +75,18 @@
         "body": [
             "<variablelist>",
             "\t<varlistentry>",
-            "\t\t\t<term>${1:insert term}</term>",
+            "\t\t\t<term>${1:TERM}</term>",
             "\t\t\t<listitem>",
             "\t\t\t\t<para>",
-            "\t\t\t\t\t${2:insert text}",
+            "\t\t\t\t\t${2:TEXT}",
             "\t\t\t\t</para>",
             "\t\t\t</listitem>",
             "\t</varlistentry>",
             "\t<varlistentry>",
-            "\t\t\t<term>${3:insert term}</term>",
+            "\t\t\t<term>${3:TERM}</term>",
             "\t\t\t<listitem>",
             "\t\t\t\t<para>",
-            "\t\t\t\t\t${4:insert text}",
+            "\t\t\t\t\t${4:TEXT}",
             "\t\t\t\t</para>",
             "\t\t\t</listitem>",
             "\t</varlistentry>",
@@ -95,30 +95,30 @@
     },
     "Command": {
         "prefix": "cm",
-        "body": "<command>${1:insert command}</command>"
+        "body": "<command>${1:COMMAND}</command>"
     },
     "Emphasize": {
         "prefix": "em",
-        "body": "<emphasis>${1:insert text}</emphasis>"
+        "body": "<emphasis>${1:TEXT}</emphasis>"
     },
     "Emphasize with bold": {
         "prefix": "emb",
-        "body": "<emphasis role=\"bold\">${1:insert text}</emphasis>"
+        "body": "<emphasis role=\"bold\">${1:TEXT}</emphasis>"
     },
     "Figure": {
         "prefix": "fg",
         "body": [
-            "<figure>",
-            "\t<title>${1:insert title}</title>",
+            "<figure xml:id=\"${1:XML_ID}\">",
+            "\t<title>${2:TITLE}</title>",
             "\t<mediaobject>",
             "\t\t<imageobject role=\"fo\">",
-            "\t\t\t<imagedata fileref=\"${2:insert filename}\" width=\"${3:insert width}\"/>",
+            "\t\t\t<imagedata fileref=\"${3:FILE_NAME}\" width=\"${4:WIDTH}\"/>",
             "\t\t</imageobject>",
             "\t\t<imageobject role=\"html\">",
-            "\t\t\t<imagedata fileref=\"${2:insert filename}\" width=\"${3:insert width}\"/>",
+            "\t\t\t<imagedata fileref=\"${3:FILE_NAME}\" width=\"${4:WIDTH}\"/>",
             "\t\t</imageobject>",
             "\t\t<textobject role=\"description\">",
-            "\t\t\t<phrase>${1:insert title}</phrase>",
+            "\t\t\t<phrase>${2:TITLE}</phrase>",
             "\t\t</textobject>",
             "\t</mediaobject>",
             "</figure>"
@@ -126,42 +126,42 @@
     },
     "File name": {
         "prefix": "fn",
-        "body": "<filename>${1:insert file name}</filename>"
+        "body": "<filename>${1:FILE_NAME}</filename>"
     },
     "GUI menu item": {
         "prefix": "gm",
-        "body": "<guimenu>${1:insert menu item}</guimenu>"
+        "body": "<guimenu>${1:MENU_ITEM}</guimenu>"
     },
     "Important": {
         "prefix": "im",
         "body": [
             "<important>",
-            "\t<title>${1:insert title}</title>",
+            "\t<title>${1:TITLE}</title>",
             "\t<para>",
-            "\t\t${2:insert text}",
+            "\t\t${2:TEXT}",
             "\t</para>",
             "</important>"
         ]
     },
     "Literal text": {
         "prefix": "ll",
-        "body": "<literal>${1:insert text}</literal>"
+        "body": "<literal>${1:TEXT}</literal>"
     },
     "Link": {
         "prefix": "ln",
-        "body": "<link xlink:href=\"${1:insert URL}\"/>"
+        "body": "<link xlink:href=\"${1:URL}\"/>"
     },
     "Menu choice": {
         "prefix": "mn",
-        "body": "<menuchoice><guimenu>${1:insert menu item}</guimenu><guimenu>${2:insert menu item}</guimenu></menuchoice>"
+        "body": "<menuchoice><guimenu>${1:MENU_ITEM}</guimenu><guimenu>${2:MENU_ITEM}</guimenu></menuchoice>"
     },
     "Note": {
         "prefix": "nt",
         "body": [
             "<note>",
-            "\t<title>${1:insert title}</title>",
+            "\t<title>${1:TITLE}</title>",
             "\t<para>",
-            "\t\t${2:insert text}",
+            "\t\t${2:TEXT}",
             "\t</para>",
             "</note>"
         ]
@@ -172,12 +172,12 @@
             "<orderedlist>",
             "\t<listitem>",
             "\t\t<para>",
-            "\t\t\t${1:insert text}",
+            "\t\t\t${1:TEXT}",
             "\t\t</para>",
             "\t</listitem>",
             "\t<listitem>",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${2:TEXT}",
             "\t\t</para>",
             "\t</listitem>",
             "</orderedlist>"
@@ -185,15 +185,15 @@
     },
     "Option": {
         "prefix": "op",
-        "body": "<option>${1:insert text}</option>"
+        "body": "<option>${1:TEXT}</option>"
     },
     "Package": {
         "prefix": "pk",
-        "body": "<package>${1:insert text}</package>"
+        "body": "<package>${1:TEXT}</package>"
     },
     "Replaceable": {
         "prefix": "rp",
-        "body": "<replaceable>${1:insert text}</replaceable>"
+        "body": "<replaceable>${1:TEXT}</replaceable>"
     },
     "Step": {
         "prefix": "st",
@@ -208,7 +208,7 @@
         "body": [
             "<step${1|>, performance=\"optional\">|}",
             "\t<para>",
-            "\t\t${2:insert text}",
+            "\t\t${2:TEXT}",
             "\t</para>",
             "</step>"
         ]
@@ -219,12 +219,12 @@
             "<procedure>",
             "\t<step>",
             "\t\t<para>",
-            "\t\t\t${1:insert text}",
+            "\t\t\t${1:TEXT}",
             "\t\t</para>",
             "\t</step>",
             "\t<step>",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${2:TEXT}",
             "\t\t</para>",
             "\t</step>",
             "</procedure>",
@@ -233,20 +233,20 @@
     "Screen": {
         "prefix": "sc",
         "body": [
-            "<screen>${1:insert output}</screen>"
+            "<screen>${1:}</screen>"
         ]
     },
     "Screen with a command": {
         "prefix": "scc",
         "body": [
-            "<screen>&prompt.${1|user,root,sudo|};<command>${2:insert command}</command>",
-            "${3:insert output}</screen>"
+            "<screen>&prompt.${1|user,root,sudo|};<command>${2:COMMAND}</command>",
+            "${3:}</screen>"
         ]
     },
     "System item (of a type)": {
         "prefix": "si",
         "body": [
-            "<systemitem${1|>, class=\"daemon\">, class=\"domainname\">, class=\"etheraddress\">, class=\"event\">, class=\"eventhandler\">, class=\"filesystem\">, class=\"fqdomainname\">, class=\"groupname\">, class=\"interface\">, class=\"ipaddress\">, class=\"library\">, class=\"macro\">, class=\"netmask\">, class=\"newsgroup\">, class=\"osname\">, class=\"process\">, class=\"protocol\">, class=\"resource\">, class=\"securitycontext\">, class=\"server\">, class=\"service\">, class=\"systemname\">, class=\"username\">|}${2:insert item}</systemitem>"
+            "<systemitem${1|>, class=\"daemon\">, class=\"domainname\">, class=\"etheraddress\">, class=\"event\">, class=\"eventhandler\">, class=\"filesystem\">, class=\"fqdomainname\">, class=\"groupname\">, class=\"interface\">, class=\"ipaddress\">, class=\"library\">, class=\"macro\">, class=\"netmask\">, class=\"newsgroup\">, class=\"osname\">, class=\"process\">, class=\"protocol\">, class=\"resource\">, class=\"securitycontext\">, class=\"server\">, class=\"service\">, class=\"systemname\">, class=\"username\">|}${2:}</systemitem>"
         ]
     },
     "Tip": {
@@ -254,7 +254,7 @@
         "body": [
             "<tip>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${1:TEXT}",
             "\t</para>",
             "</tip>"
         ]
@@ -263,9 +263,9 @@
         "prefix": "wn",
         "body": [
             "<warning>",
-            "\t<title>${1:insert title}</title>",
+            "\t<title>${1:TITLE}</title>",
             "\t<para>",
-            "\t\t${2:insert text}",
+            "\t\t${2:TEXT}",
             "\t</para>",
             "</warning>"
         ]
@@ -273,18 +273,18 @@
     "Variable name": {
         "prefix": "va",
         "body": [
-            "<varname>${1:insert variable}</varname>"
+            "<varname>${1:VARIABLE_NAME}</varname>"
         ]
     },
     "X-reference": {
         "prefix": "xr",
-        "body": "<xref linkend=\"${1:insert URL}\"/>"
+        "body": "<xref linkend=\"${1:URL}\"/>"
     },
     "Table entry": {
         "prefix": "te",
         "body": [
             "<entry>",
-            "\t${1:insert content}",
+            "\t${1:}",
             "</entry>"
         ]
     },
@@ -293,7 +293,7 @@
         "body": [
             "<entry>",
             "\t<para>",
-            "\t\t${1:insert content}",
+            "\t\t${1:}",
             "\t</para>",
             "</entry>"
         ]
@@ -304,7 +304,7 @@
             "<row>",
             "\t<entry>",
             "\t\t<para>",
-            "\t\t\t${1:insert content}",
+            "\t\t\t${1:}",
             "\t\t</para>",
             "\t</entry>",
             "</row>"
@@ -317,12 +317,12 @@
             "\t<row>",
             "\t\t<entry>",
             "\t\t\t<para>",
-            "\t\t\t\t${1:insert content}",
+            "\t\t\t\t${1:}",
             "\t\t\t</para>",
             "\t\t</entry>",
             "\t\t<entry>",
             "\t\t\t<para>",
-            "\t\t\t\t${2:insert content}",
+            "\t\t\t\t${2:}",
             "\t\t\t</para>",
             "\t\t</entry>",
             "\t</row>",
@@ -336,12 +336,12 @@
             "\t<row>",
             "\t\t<entry>",
             "\t\t\t<para>",
-            "\t\t\t\t${1:insert content}",
+            "\t\t\t\t${1:}",
             "\t\t\t</para>",
             "\t\t</entry>",
             "\t\t<entry>",
             "\t\t\t<para>",
-            "\t\t\t\t${2:insert content}",
+            "\t\t\t\t${2:}",
             "\t\t\t</para>",
             "\t\t</entry>",
             "\t</row>",
@@ -352,7 +352,7 @@
         "prefix": "tbl",
         "body": [
             "<table>",
-            "\t<title>${1:insert title}</title>",
+            "\t<title>${1:TITLE}</title>",
             "\t<tgroup cols=\"2\">",
             "\t\t<colspec colname=\"c1\" align=\"${2|left,center,right|}\" />",
             "\t\t<colspec colname=\"c2\" align=\"${3|left,center,right|}\" />",
@@ -360,12 +360,12 @@
             "\t\t\t<row>",
             "\t\t\t\t<entry>",
             "\t\t\t\t\t<para>",
-            "\t\t\t\t\t\t${4:insert title}",
+            "\t\t\t\t\t\t${4:TITLE}",
             "\t\t\t\t\t</para>",
             "\t\t\t\t</entry>",
             "\t\t\t\t<entry>",
             "\t\t\t\t\t<para>",
-            "\t\t\t\t\t\t${5:insert title}",
+            "\t\t\t\t\t\t${5:TITLE}",
             "\t\t\t\t\t</para>",
             "\t\t\t\t</entry>",
             "\t\t\t</row>",
@@ -374,12 +374,12 @@
             "\t\t\t<row>",
             "\t\t\t\t<entry>",
             "\t\t\t\t\t<para>",
-            "\t\t\t\t\t\t${6:insert content}",
+            "\t\t\t\t\t\t${6:}",
             "\t\t\t\t\t</para>",
             "\t\t\t\t</entry>",
             "\t\t\t\t<entry>",
             "\t\t\t\t\t<para>",
-            "\t\t\t\t\t\t${7:insert content}",
+            "\t\t\t\t\t\t${7:}",
             "\t\t\t\t\t</para>",
             "\t\t\t\t</entry>",
             "\t\t\t</row>",
@@ -393,7 +393,7 @@
         "body": [
             "<abstract>",
             "\t<para>",
-            "\t\t${1:insert text}",
+            "\t\t${1:TEXT}",
             "\t</para>",
             "</abstract>",
         ]
@@ -402,10 +402,10 @@
         "prefix": "in",
         "body": [
             "<info>",
-            "\t<title>${1:insert title}</title>",
+            "\t<title>${1:TITLE}</title>",
             "\t<abstract>",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${2:TEXT}",
             "\t\t</para>",
             "\t</abstract>",
             "</info>"
@@ -415,10 +415,10 @@
         "prefix": "mg",
         "body": [
             "<merge>",
-            "\t<title>${1:insert title}</title>",
+            "\t<title>${1:TITLE}</title>",
             "\t<abstract>",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${2:TEXT}",
             "\t\t</para>",
             "\t</abstract>",
             "</merge>"
@@ -430,12 +430,12 @@
             "<substeps${1|>, performance=\"optional\">|}",
             "\t<step>",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${2:TEXT}",
             "\t\t</para>",
             "\t</step>",
             "\t<step>",
             "\t\t<para>",
-            "\t\t\t${3:insert text}",
+            "\t\t\t${3:TEXT}",
             "\t\t</para>",
             "\t</step>",
             "</substeps>"
@@ -443,7 +443,7 @@
     },
     "Keycap": {
         "prefix": "kc",
-        "body": "<keycap>${1:insert keycap}</keycap>"
+        "body": "<keycap>${1:}</keycap>"
     },
     "Keycap with a function": {
         "prefix": "kcf",
@@ -451,14 +451,14 @@
     },
     "Callout location": {
         "prefix": "co",
-        "body": "<co xml:id=\"${1:insert ID}\"/>"
+        "body": "<co xml:id=\"${1:XML_ID}\"/>"
     },
     "Callout definition": {
         "prefix": "coa",
         "body": [
-            "<callout arearefs=\"${1:insert one or more IDs}\">",
+            "<callout arearefs=\"${1:CALLOUT_IDs}\">",
             "\t<para>",
-            "\t\t${2:insert text}",
+            "\t\t${2:TEXT}",
             "\t</para>",
             "</callout>",
         ]
@@ -467,14 +467,14 @@
         "prefix": "col",
         "body": [
             "<calloutlist>",
-            "\t<callout arearefs=\"${1:insert one or more IDs}\">",
+            "\t<callout arearefs=\"${1:CALLOUT_IDs}\">",
             "\t\t<para>",
-            "\t\t\t${2:insert text}",
+            "\t\t\t${2:TEXT}",
             "\t\t</para>",
             "\t</callout>",
-            "\t<callout arearefs=\"${3:insert one or more IDs}\">",
+            "\t<callout arearefs=\"${3:CALLOUT_IDs}\">",
             "\t\t<para>",
-            "\t\t\t${4:insert text}",
+            "\t\t\t${4:TEXT}",
             "\t\t</para>",
             "\t</callout>",
             "</calloutlist>"
@@ -483,26 +483,26 @@
     "Assembly resource": {
         "prefix": "rs",
         "body": [
-            "<resource href=\"${1:insert path to XML file}\" xml:id=\"${2:insert ID}\">",
-            "\t<description>${3:insert description}</description>",
+            "<resource href=\"${1:PATH_TO_XML_FILE}\" xml:id=\"${2:XML_ID}\">",
+            "\t<description>${3:DESCRIPTION}</description>",
             "</resource>"
         ]
     },
     "Assembly module": {
         "prefix": "md",
         "body": [
-            "<module renderas=\"${1|chapter,section,appendix|}\" resourceref=\"${2:insert ID}\"/>"
+            "<module renderas=\"${1|chapter,section,appendix|}\" resourceref=\"${2:XML_ID}\"/>"
         ]
     },
     "Assembly module with merge": {
         "prefix": "mdm",
         "body": [
-            "<module renderas=\"${1|chapter,section,appendix|}\" resourceref=\"${2:insert ID}\">",
+            "<module renderas=\"${1|chapter,section,appendix|}\" resourceref=\"${2:XML_ID}\">",
             "\t<merge>",
-            "\t\t<title>${3:insert title}</title>",
+            "\t\t<title>${3:TITLE}</title>",
             "\t\t<abstract>",
             "\t\t\t<para>",
-            "\t\t\t\t${4:insert text}",
+            "\t\t\t\t${4:TEXT}",
             "\t\t\t</para>",
             "\t\t</abstract>",
             "\t</merge>",
@@ -512,22 +512,22 @@
     "Phrase": {
         "prefix": "ph",
         "body": [
-            "<phrase${1|>, os=\"sles;sled;osuse;slemocro;alp-dolomite\">, condition=\"\">, arch=\"x86_64;zseries;power\">|}${3:insert phrase}</phrase>"
+            "<phrase${1|>, os=\"sles;sled;osuse;slemocro;alp-dolomite\">, condition=\"\">, arch=\"x86_64;zseries;power\">|}${3:TEXT}</phrase>"
         ]
     },
     "Quote": {
         "prefix": "qt",
-        "body": "<quote>${1:insert text}</quote>"
+        "body": "<quote>${1:TEXT}</quote>"
     },
     "Example": {
         "prefix": "ex",
         "body": [
-            "<example xml:id=\"${1:insert ID}\">",
-            "\t<title>${2:insert title}</title>",
+            "<example xml:id=\"${1:XML_ID}\">",
+            "\t<title>${2:TITLE}</title>",
             "\t<para>",
-            "\t\t${3:insert text}",
+            "\t\t${3:TEXT}",
             "\t</para>",
-            "\t<screen>${4:insert output}</screen>",
+            "\t<screen>${4:}</screen>",
             "</example>"
         ]
     }

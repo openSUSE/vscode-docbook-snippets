@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.3.4
+- added `xml:id` to figures
+- capitalized HINTS
 ## 0.3.3
 - added `<quote>` and `<example>`
 ## 0.3.2
