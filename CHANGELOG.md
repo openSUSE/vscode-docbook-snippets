@@ -1,5 +1,7 @@
 # Change Log
 
+## 0.3.5
+- added `<qandaset>` and `<qandaentry>`
 ## 0.3.4
 - added `xml:id` to figures
 - capitalized HINTS

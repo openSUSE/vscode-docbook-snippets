@@ -530,5 +530,53 @@
             "\t<screen>${4:}</screen>",
             "</example>"
         ]
-    }
+    },
+    "Qanda Set": {
+        "prefix": "qs",
+        "body": [
+            "<qandaset>",
+            "\t<qandaentry>",
+            "\t\t<question>",
+            "\t\t\t<para>",
+            "\t\t\t\t${1:TEXT}",
+            "\t\t\t</para>",
+            "\t\t</question>",
+            "\t\t<answer>",
+            "\t\t\t<para>",
+            "\t\t\t\t${2:TEXT}",
+            "\t\t\t</para>",
+            "\t\t</answer>",
+            "\t</qandaentry>",
+            "\t<qandaentry>",
+            "\t\t<question>",
+            "\t\t\t<para>",
+            "\t\t\t\t${1:TEXT}",
+            "\t\t\t</para>",
+            "\t\t</question>",
+            "\t\t<answer>",
+            "\t\t\t<para>",
+            "\t\t\t\t${2:TEXT}",
+            "\t\t\t</para>",
+            "\t\t</answer>",
+            "\t</qandaentry>",
+            "</qandaset>"
+        ]
+    },
+    "Qanda Entry": {
+        "prefix": "qe",
+        "body": [
+            "<qandaentry>",
+            "\t<question>",
+            "\t\t<para>",
+            "\t\t\t${1:TEXT}",
+            "\t\t</para>",
+            "\t</question>",
+            "\t<answer>",
+            "\t\t<para>",
+            "\t\t\t${2:TEXT}",
+            "\t\t</para>",
+            "\t</answer>",
+            "</qandaentry>",
+        ]
+    },
 }
